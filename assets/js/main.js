@@ -38,9 +38,17 @@ servicesBtn.addEventListener("click", () => {
 });
 
 const costCalculationBtn = document.getElementById("costCalculationBtn");
+const costCalculationBtn2 = document.getElementById("costCalculationBtn2");
 const costCalculationBlock = document.querySelector(".Cost_calculation");
 
 costCalculationBtn.addEventListener("click", () => {
+  costCalculationBlock.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+});
+
+costCalculationBtn2.addEventListener("click", () => {
   costCalculationBlock.scrollIntoView({
     behavior: "smooth",
     block: "start",

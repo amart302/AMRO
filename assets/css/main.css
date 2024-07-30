@@ -233,7 +233,7 @@ main {
 }
 nav {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 
   p {
     margin: 0;
@@ -455,21 +455,24 @@ nav {
   gap: 20px;
 }
 .additionalService {
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.6fr 1fr;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap:10px;
   padding: 50px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   img {
-    width: 26%;
+    width: 70%;
+    border-radius: 50%;
+    
   }
 
   h4 {
     color: #4b5258;
-    font-size: 18px;
+    font-size: 17px;
     margin: 0 0 10px 0;
   }
 
