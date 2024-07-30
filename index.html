@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Профессиональные клининговые услуги в Москве от компании Amro. Гарантируем высокое качество и индивидуальный подход.">
-    <title>Клининг в Москве - Amro</title>
+    <title>Клининговая компания Amro</title>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,8 +30,8 @@
             <div class="socialNetworksBlock">
                 <p>Быстрая связь с нами<br>
                     в мессенджерах:</p>
-                <a target="_blank" href="t.me/amarthh"><img src="./assets/images/telegram.svg" alt=""></a>
-                <a target="_blank" href="https://wa.me/+79289177234"><img src="./assets/images/whatsApp.svg" alt=""></a>
+                <a href="https://t.me/amarthh" target="_blank"><img src="./assets/images/telegramImg.svg" alt=""></a>
+                <a href="https://wa.me/+79289177234" target="_blank"><img src="./assets/images/whatsAppImg.svg" alt=""></a>
             </div>
             <button class="consultationBtn">Заказать консультацию</button>
         </div>
@@ -44,45 +44,47 @@
             <h2>Выберите вид уборки, получите точный расчёт<br> стоимости и скидку 10% на первый заказ</h2>
             <div class="background_btns">
                 <button class="calculateBtn">Рассчитать стоимость</button>
-                <button class="chooseBtn">Выбрать вид уборки</button>
+                <button class="chooseBtn" id="chooseBtn">Выбрать вид уборки</button>
             </div>
         </div>
     </div>
     <main>
-        <div class="mainBlock1">
-            <div class="quality1">
-                <h3>Немецкое<br>
-                    и Американское<br>
-                    оборудование</h3>
-                <img src="./assets/images/equipment.svg" style="width: 36%;">
+        <section class="Our_qualities">
+            <div class="mainBlock1">
+                <div class="quality1">
+                    <h3>Немецкое<br>
+                        и Американское<br>
+                        оборудование</h3>
+                    <img src="./assets/images/equipment.svg" style="width: 36%;">
+                </div>
+                <div class="quality2">
+                    <h3>Гипоаллергенные<br>
+                        безопасные<br>
+                        моющие</h3>
+                    <img src="./assets/images/detergents.svg" style="width: 32%;">
+                </div>
+                <div class="quality1">
+                    <h3>Соблюдаем<br>
+                        санитарные<br>
+                        нормы</h3>
+                    <img src="./assets/images/gloves.svg" style="width: 46%;">
+                </div>
+                <div class="quality2">
+                    <h3>Оплата<br>
+                        по результату<br>
+                        после уборки</h3>
+                    <img src="./assets/images/guarantor.svg" style="width: 46%;">
+                </div>
             </div>
-            <div class="quality2">
-                <h3>Гипоаллергенные<br>
-                    безопасные<br>
-                    моющие</h3>
-                <img src="./assets/images/detergents.svg" style="width: 32%;">
-            </div>
-            <div class="quality1">
-                <h3>Соблюдаем<br>
-                    санитарные<br>
-                    нормы</h3>
-                <img src="./assets/images/gloves.svg" style="width: 46%;">
-            </div>
-            <div class="quality2">
-                <h3>Оплата<br>
-                    по результату<br>
-                    после уборки</h3>
-                <img src="./assets/images/guarantor.svg" style="width: 46%;">
-            </div>
-        </div>
+        </section>
 
-        <section class="navigation">
+        <section class="Navigation">
             <div class="mainBlock2">
                 <nav>
-                    <p>Услуги</p>
-                    <p>Рассчитать стоимость</p>
-                    <p id="whyAreWeBtn">Почему мы</p>
-                    <p id="howDoWeCleaningBtn">Как мы делаем уборку</p>
+                    <p class="navLink" id="servicesBtn">Услуги</p>
+                    <p class="navLink" id="costCalculationBtn">Рассчитать стоимость</p>
+                    <p class="navLink" id="whyAreWeBtn">Почему мы</p>
+                    <p class="navLink" id="howDoWeCleaningBtn">Выбрать вид уборки</p>
                 </nav>
             </div>
         </section>
@@ -133,7 +135,7 @@
 
         <section class="How_do_we_do_the_cleaning">
             <div class="mainBlock4">
-                <h2>6 видов уборки под любую Вашу задачу</h2>
+                <h2><span>6 видов уборки</span> под любую Вашу задачу</h2>
                 <h3>Наши услуги подойдут для семейных пар с детьми,<br> 
                     владельцев животных, аллергиков, арендодателей</h3>
                 <div class="mainBlock4_podBlock1">
@@ -189,26 +191,65 @@
             </div>
         </section>
 
-        <section class="services">
+        <section class="Additional_services">
             <div class="mainBlock5">
                 <div class="mainBlock5_podBlock1">
                     <h3>Не нашли нужный вариант?</h3>
                 </div>
                 <h2>Посмотрите дополнительные услуги</h2>
                 <h3>Устраним любой каприз в уборке</h3>
-            </div>
-            <div class="mainBlock5_podBlock2">
-                <div>
-                    <img src="" alt="">
+                <div class="mainBlock5_podBlock2">
+                    <div class="additionalService">
+                        <img src="./assets/images/washingTheMicrowave.svg" alt="">
+                        <div>
+                            <h4>Мойка микроволновки</h4>
+                            <h5>- 400 ₽</h5>
+                        </div>
+                    </div>
+                    <div class="additionalService">
+                        <img src="./assets/images/washingTheMicrowave.svg" alt="">
+                        <div>
+                            <h4>Мойка микроволновки</h4>
+                            <h5>- 400 ₽</h5>
+                        </div>
+                    </div>
+                    <div class="additionalService">
+                        <img src="./assets/images/washingTheMicrowave.svg" alt="">
+                        <div>
+                            <h4>Мойка микроволновки</h4>
+                            <h5>- 400 ₽</h5>
+                        </div>
+                    </div>
                 </div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+            </div>
+        </section>
+
+        <section class="Cost_calculation">
+            <div class="mainBlock6">
+                <div class="mainBlock6_podBlock1">
+                        <h2>Моментальный Рассчёт<br>
+                            стоимости по фотографии</h2>
+                        <h3>Пришлите фото в мессенджере, чтобы<br>
+                            рассчитать стоимость, быстро заказать<br>
+                            уборку или задать нам вопрос</h3>
+                        <div class="socialNewtworksBlock2">
+                            <h4>Кликните на удобный способ<br>
+                                    связи и напишите нам:</h4>
+                            <div class="socialNewtworksBlock2_podBlock1">
+                                <a href="https://t.me/amarthh" target="_blank" class="linkToTheTelegram">
+                                    <img src="./assets/images/telegramImg2.svg" alt="">
+                                </a>
+                                <a href="https://wa.me/+79289177234" target="_blank" class="linkToTheWhatsApp">
+                                    <img src="./assets/images/whatsAppImg2.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="responseRateBlock">
+                                <img src="./assets/images/watchImg.svg">
+                                <h5>Скорость ответа 5 минут</h5>
+                            </div>
+                        </div>
+                    <img src="./assets/images/costCalculationImg.svg" class="costCalculationImg">
+                </div>
             </div>
         </section>
     </main>
