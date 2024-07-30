@@ -46,3 +46,13 @@ costCalculationBtn.addEventListener("click", () => {
     block: "start",
   });
 });
+
+const onUpBtn = document.getElementById("onUpBtn");
+const header = document.querySelector("header");
+
+onUpBtn.addEventListener("click", () => {
+  header.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+});
