@@ -18,7 +18,7 @@ header {
 
 .headBlock1 {
   display: grid;
-  grid-template-columns: 1fr 0.5fr 1fr 0.5fr;
+  grid-template-columns: 1fr 0.8fr 1fr 0.5fr;
   align-items: center;
   gap: 30px;
   max-width: 1500px;
@@ -44,7 +44,8 @@ header {
     font-weight: 600;
     color: rgb(20, 98, 110);
   }
-  span {
+  p {
+    margin: 0;
     font-size: 14px;
     color: #959a9d;
   }
@@ -237,6 +238,7 @@ nav {
   gap: 4px;
 
   a {
+    font-size: 18px;
     margin: 0;
     text-align: center;
     color: black;
@@ -369,6 +371,7 @@ nav {
     color: #4b5258;
     font-size: 22px;
     margin-block: 10px;
+    text-align: center;
   }
   p {
     color: #4b5258;
@@ -576,6 +579,33 @@ nav {
     width: 6%;
   }
 }
+
+/* Main Block 7 */
+.mainBlock7{
+  max-width: 1500px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2{
+    color: #4b5258;
+    font-size: 36px;
+    font-weight: 700;
+  }
+}
+.mainBlock7_podBlock1{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  div{
+    height: 160px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+}
 /* Main Styles */
 
 /* Footer styles */
@@ -595,6 +625,7 @@ footer {
     margin-inline: auto;
     
     span{
+      text-align: center;
         color: #4B5258;
         text-decoration: none;
     }
@@ -615,6 +646,7 @@ footer {
   .onUp{
     display: flex;
     align-items: center;
+    justify-content: right;
     color: #4B5258;
   }
   #onUpBtn{
@@ -664,5 +696,258 @@ footer {
     border-radius: 50px;
     color: white;
   }
+}
+
+@media (max-width: 1550px) and (min-width: 990px) {
+  .headBlock1 {
+    max-width: 1200px;
+    grid-template-columns: 1fr 0.6fr 1fr 0.74fr;
+  }
+  .consultationBtn {
+    padding: 20px;
+    font-size: 12px;
+  }
+  .background {
+    height: 800px;
+  }
+  .logoblock_podblock {
+    h3 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 11px;
+    }
+  }
+  .phoneNumerBlock {
+    h3 {
+      font-size: 16px;
+    }
+  }
+  .workSchedule {
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .background {
+    height: 780px;
+  }
+  
+  .background_podblock {
+    width: 1200px;
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+  }
+  .background_btns {
+    display: flex;
+    margin-top: 60px;
+    gap: 10px;
+  }
+  .calculateBtn {
+    padding-block: 28px;
+    padding-inline: 30px;
+    font-size: 14px;
+  }
+  .chooseBtn {
+    padding-block: 28px;
+    padding-inline: 30px;
+    font-size: 14px;
+  }
+  
+  .mainBlock1 {
+    max-width: 1200px;
+  }
+  .quality1 {
+    height: 160px;
+    font-size: 14px;
+  
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+  .quality2 {
+    height: 160px;
+    font-size: 14px;
+  
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+
+  .mainBlock2 {
+    max-width: 1200px;
+  }
+  nav {
+    a {
+      font-size: 16px;
+    }
+  }
+
+  .mainBlock3 {
+    max-width: 1200px;
+  
+    h2 {
+      font-size: 28px;
+    }
+  }
+  .mainBlock3_podBlock1 {
+    width: 60%;
+  
+    h3 {
+      font-size: 24px;
+    }
+  }
+  .mainBlock3_podBlock2 {
+    h3 {
+      font-size: 22px;
+      margin-top: 180px;
+    }
+    p {
+      margin: 0;
+    }
+    img {
+      position: absolute;
+    }
+  }
+
+  .mainBlock4 {
+    max-width: 1200px;
+  
+    h2 {
+      font-size: 28px;
+    }
+    h3 {
+      font-size: 24px;
+    }
+  }
+  .service {
+    h4 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .priceBlock {
+    padding-block: 22px;
+  }
+
+  .mainBlock5 {
+    max-width: 1200px;
+  
+    h2 {
+      font-size: 28px;
+    }
+  
+    h3 {
+      font-size: 24px;
+    }
+  }
+  .mainBlock5_podBlock1 {
+    h3 {
+      font-size: 24px;
+    }
+  }
+  .additionalService {
+    padding: 30px;
+  
+    img {
+      width: 70%;
+    }
+  
+    h4 {
+      font-size: 16px;
+    }
+  
+    h5 {
+      font-size: 20px;
+    }
+  }
+
+  .mainBlock6 {
+    height: 780px;
+  }
+  .costCalculationImg {
+    position: absolute;
+    bottom: 0;
+    right: 6%;
+    width: 60%;
+    z-index: -1;
+  }
+  .mainBlock6_podBlock1 {
+    max-width: 1200px;
+
+    h2 {
+      color: #4b5258;
+      font-size: 30px;
+      font-weight: 600;
+    }
+  
+    h3 {
+      color: #959a9d;
+      font-size: 22px;
+      font-weight: 600;
+    }
+    h4 {
+      color: #4b5258;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+  
+  .socialNewtworksBlock2 {
+    h5 {
+      font-size: 12px;
+    }
+  }
+  .linkToTheTelegram {
+    padding: 14px;
+  }
+  .linkToTheWhatsApp {
+    padding: 14px;
+  }
+  
+  
+  .footBlock1 {
+    grid-template-columns: 1fr 0.5fr 0.8fr 1fr 0.5fr;
+    gap: 30px;
+    max-width: 1200px;
+    
+    span{
+      font-size: 13px;
+    }
+  }
+  .socialNetworksBlock3 {
+    p {
+      font-size: 13px;
+      font-weight: 500;
+      text-align: right;
+    }
+  }
+  .onUp{
+    display: flex;
+    align-items: center;
+    color: #4B5258;
+  }
+  #onUpBtn{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 989px) {
+  
 }
 /* Media queries */
