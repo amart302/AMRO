@@ -234,8 +234,9 @@ main {
 nav {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
 
-  p {
+  a {
     margin: 0;
     text-align: center;
     color: black;

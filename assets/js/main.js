@@ -1,57 +1,20 @@
-const whyAreWeBtn = document.getElementById("whyAreWeBtn");
-const whyAreWeBlock = document.querySelector(".Why_are_we");
-
-whyAreWeBtn.addEventListener("click", () => {
-  whyAreWeBlock.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
-});
-
-const howDoWeCleaningBtn = document.getElementById("howDoWeCleaningBtn");
-const howDoWeCleaningBlock = document.querySelector(".How_do_we_do_the_cleaning");
 const chooseBtn = document.getElementById("chooseBtn");
-
-
-howDoWeCleaningBtn.addEventListener("click", () => {
-  howDoWeCleaningBlock.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
-});
+const howDoWeCleaning = document.getElementById("howDoWeCleaning");
 
 chooseBtn.addEventListener("click", () => {
-  howDoWeCleaningBlock.scrollIntoView({
+  howDoWeCleaning.scrollIntoView({
     behavior: "smooth",
-    block: "start",
-  });
-});
-
-const servicesBtn = document.getElementById("servicesBtn");
-const additionalServicesBlock = document.querySelector(".Additional_services");
-
-servicesBtn.addEventListener("click", () => {
-  additionalServicesBlock.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
+    block: "start"
   });
 });
 
 const costCalculationBtn = document.getElementById("costCalculationBtn");
-const costCalculationBtn2 = document.getElementById("costCalculationBtn2");
-const costCalculationBlock = document.querySelector(".Cost_calculation");
+const costCalculation = document.getElementById("costCalculation");
 
 costCalculationBtn.addEventListener("click", () => {
-  costCalculationBlock.scrollIntoView({
+  costCalculation.scrollIntoView({
     behavior: "smooth",
-    block: "start",
-  });
-});
-
-costCalculationBtn2.addEventListener("click", () => {
-  costCalculationBlock.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
+    block: "start"
   });
 });
 
@@ -61,6 +24,18 @@ const header = document.querySelector("header");
 onUpBtn.addEventListener("click", () => {
   header.scrollIntoView({
     behavior: "smooth",
-    block: "start",
+    block: "start"
+  });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(block => {
+  block.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const href = block.getAttribute('href');
+    document.querySelector(href).scrollIntoView({
+      behavior: 'smooth',
+      block: "start"
+    });
   });
 });
