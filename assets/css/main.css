@@ -587,6 +587,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-inline: 10px;
 
   h2{
     color: #4b5258;
@@ -595,16 +596,42 @@ nav {
   }
 }
 .mainBlock7_podBlock1{
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  width: 100%;
+  gap: 10px;
+}
+.feedback{
+  position: relative;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-  div{
-    height: 160px;
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  h3{
+    margin: 0;
+    font-weight: 600;
+    font-size: 17px;
   }
+  p{
+    padding: 0 16px 16px 16px;
+    margin: 0;
+    font-size: 18px;
+  }
+}
+.estimationBlock{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 16px 0 16px;
+
+  span{
+    color: rgb(252, 108, 56);
+  }
+}
+.separator{
+  height: 1px;
+  width: 100%;
+  background-color: rgb(214, 212, 212);
+  margin-block: 20px;
 }
 /* Main Styles */
 
@@ -888,24 +915,33 @@ footer {
     max-width: 1200px;
 
     h2 {
-      color: #4b5258;
       font-size: 30px;
-      font-weight: 600;
     }
   
     h3 {
-      color: #959a9d;
       font-size: 22px;
-      font-weight: 600;
     }
     h4 {
-      color: #4b5258;
       font-size: 18px;
-      font-weight: 600;
-      margin: 0;
     }
   }
   
+  .mainBlock7{
+    max-width: 1200px;
+
+    h2{
+      font-size: 28px;
+    }
+  }
+  .feedback{
+    h3{
+      font-size: 16px;
+    }
+    p{
+      font-size: 16px;
+    }
+  }
+
   .socialNewtworksBlock2 {
     h5 {
       font-size: 12px;
@@ -948,6 +984,11 @@ footer {
 }
 
 @media (max-width: 989px) {
-  
+  .consultationBtn {
+    display: none;
+  }
+  .headBlock1 {
+    grid-template-columns: 1fr 0.8fr 1fr 0.5fr;
+  }
 }
 /* Media queries */
