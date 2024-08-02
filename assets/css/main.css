@@ -44,7 +44,7 @@ header {
     font-weight: 600;
     color: rgb(20, 98, 110);
   }
-  p {
+  span {
     margin: 0;
     font-size: 14px;
     color: #959a9d;
@@ -86,7 +86,7 @@ header {
   align-items: center;
 
   p {
-    color: #4B5258;
+    color: #4b5258;
     font-size: 13px;
     font-weight: 500;
     text-align: right;
@@ -96,11 +96,24 @@ header {
   background: transparent;
   padding: 18px;
   border: solid 1px rgb(20, 98, 110);
+  color: #4b5258;
   border-radius: 100px;
   font-size: 13px;
   font-weight: 500;
   transition: all 0.2s;
   cursor: pointer;
+}
+
+.burgerMenuBtn{
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+}
+.line{
+  width: 14%;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
 }
 /* Header styles */
 
@@ -179,11 +192,10 @@ main {
   margin-top: 100px;
   gap: 14px;
 }
-.quality1 {
+.quality {
   display: flex;
   align-items: center;
   height: 200px;
-  background-color: rgb(20, 98, 110);
   border-radius: 30px;
   overflow: hidden;
   position: relative;
@@ -202,28 +214,17 @@ main {
     z-index: 1;
   }
 }
-.quality2 {
-  display: flex;
-  align-items: center;
-  height: 200px;
-  background-color: rgb(252, 108, 56);
-  border-radius: 30px;
-  overflow: hidden;
-  position: relative;
-  padding-inline: 30px;
-  font-size: 18px;
-
-  h3 {
-    color: white;
-    z-index: 2;
-  }
-
-  img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-  }
+.qualityImg1 {
+  width: 36%;
+}
+.qualityImg2 {
+  width: 32%;
+}
+.qualityImg3 {
+  width: 46%;
+}
+.qualityImg4 {
+  width: 46%;
 }
 /* Main Block 2 */
 .mainBlock2 {
@@ -271,10 +272,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: rgb(252, 108, 56); */
   background-color: rgb(20, 98, 110);
   border-radius: 80px;
-  padding-inline: 10px;
+  padding-inline: 30px;
   margin-top: 20px;
 
   h3 {
@@ -295,7 +295,7 @@ nav {
   h3 {
     color: #4b5258;
     font-size: 26px;
-    margin-top: 250px;
+    margin-top: 230px;
   }
   p {
     margin: 0;
@@ -356,7 +356,7 @@ nav {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 20px;
 }
 .service {
   position: relative;
@@ -456,14 +456,14 @@ nav {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 10px;
 }
 .additionalService {
   display: grid;
   grid-template-columns: 0.6fr 1fr;
   align-items: center;
   justify-content: center;
-  gap:10px;
+  gap: 10px;
   padding: 50px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -471,7 +471,6 @@ nav {
   img {
     width: 70%;
     border-radius: 50%;
-    
   }
 
   h4 {
@@ -581,7 +580,7 @@ nav {
 }
 
 /* Main Block 7 */
-.mainBlock7{
+.mainBlock7 {
   max-width: 1500px;
   margin-inline: auto;
   display: flex;
@@ -589,45 +588,45 @@ nav {
   align-items: center;
   padding-inline: 10px;
 
-  h2{
+  h2 {
     color: #4b5258;
     font-size: 36px;
     font-weight: 700;
   }
 }
-.mainBlock7_podBlock1{
+.mainBlock7_podBlock1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   gap: 10px;
 }
-.feedback{
+.feedback {
   position: relative;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-  h3{
+  h3 {
     margin: 0;
     font-weight: 600;
     font-size: 17px;
   }
-  p{
+  p {
     padding: 0 16px 16px 16px;
     margin: 0;
     font-size: 18px;
   }
 }
-.estimationBlock{
+.estimationBlock {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 16px 16px 0 16px;
 
-  span{
+  span {
     color: rgb(252, 108, 56);
   }
 }
-.separator{
+.separator {
   height: 1px;
   width: 100%;
   background-color: rgb(214, 212, 212);
@@ -637,51 +636,50 @@ nav {
 
 /* Footer styles */
 footer {
-    width: 98%;
-    padding-inline: 10px;
-    padding-top: 16px;
-    margin: 100px 0 60px 0;
+  width: 98%;
+  padding-inline: 10px;
+  padding-top: 16px;
+  margin: 100px 0 60px 0;
+}
+
+.footBlock1 {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.8fr 1fr 0.5fr;
+  align-items: center;
+  gap: 30px;
+  max-width: 1500px;
+  margin-inline: auto;
+
+  span {
+    color: #4b5258;
+    text-decoration: none;
   }
-  
-  .footBlock1 {
-    display: grid;
-    grid-template-columns: 1fr 0.5fr 0.8fr 1fr 0.5fr;
-    align-items: center;
-    gap: 30px;
-    max-width: 1500px;
-    margin-inline: auto;
-    
-    span{
-      text-align: center;
-        color: #4B5258;
-        text-decoration: none;
-    }
+}
+.socialNetworksBlock3 {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    color: #4b5258;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: right;
   }
-  .socialNetworksBlock3 {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-  
-    p {
-        color: #4B5258;
-      font-size: 13px;
-      font-weight: 500;
-      text-align: right;
-    }
-  }
-  .onUp{
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    color: #4B5258;
-  }
-  #onUpBtn{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  /* Footer styles */
+}
+.onUp {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  color: #4b5258;
+}
+#onUpBtn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+/* Footer styles */
 
 /* Media queries */
 @media (hover: hover) {
@@ -725,10 +723,10 @@ footer {
   }
 }
 
-@media (max-width: 1550px) and (min-width: 990px) {
+@media (max-width: 1550px) and (min-width: 950px) {
   .headBlock1 {
     max-width: 1200px;
-    grid-template-columns: 1fr 0.6fr 1fr 0.74fr;
+    grid-template-columns: 0.8fr 0.8fr 1fr 0.6fr;
   }
   .consultationBtn {
     padding: 20px;
@@ -741,7 +739,7 @@ footer {
     h3 {
       font-size: 18px;
     }
-    p {
+    span {
       font-size: 11px;
     }
   }
@@ -759,7 +757,7 @@ footer {
   .background {
     height: 780px;
   }
-  
+
   .background_podblock {
     width: 1200px;
     h1 {
@@ -784,25 +782,15 @@ footer {
     padding-inline: 30px;
     font-size: 14px;
   }
-  
+
   .mainBlock1 {
     max-width: 1200px;
   }
-  .quality1 {
+  .quality {
     height: 160px;
     font-size: 14px;
-  
-    img {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: 1;
-    }
-  }
-  .quality2 {
-    height: 160px;
-    font-size: 14px;
-  
+    padding-inline: 20px;
+
     img {
       position: absolute;
       bottom: 0;
@@ -822,14 +810,14 @@ footer {
 
   .mainBlock3 {
     max-width: 1200px;
-  
+
     h2 {
       font-size: 28px;
     }
   }
   .mainBlock3_podBlock1 {
     width: 60%;
-  
+
     h3 {
       font-size: 24px;
     }
@@ -837,7 +825,7 @@ footer {
   .mainBlock3_podBlock2 {
     h3 {
       font-size: 22px;
-      margin-top: 180px;
+      margin-top: 166px;
     }
     p {
       margin: 0;
@@ -849,7 +837,7 @@ footer {
 
   .mainBlock4 {
     max-width: 1200px;
-  
+
     h2 {
       font-size: 28px;
     }
@@ -863,6 +851,7 @@ footer {
     }
     p {
       font-size: 16px;
+      margin-bottom: 140px;
     }
   }
   .priceBlock {
@@ -871,11 +860,11 @@ footer {
 
   .mainBlock5 {
     max-width: 1200px;
-  
+
     h2 {
       font-size: 28px;
     }
-  
+
     h3 {
       font-size: 24px;
     }
@@ -887,15 +876,15 @@ footer {
   }
   .additionalService {
     padding: 30px;
-  
+
     img {
       width: 70%;
     }
-  
+
     h4 {
       font-size: 16px;
     }
-  
+
     h5 {
       font-size: 20px;
     }
@@ -917,7 +906,7 @@ footer {
     h2 {
       font-size: 30px;
     }
-  
+
     h3 {
       font-size: 22px;
     }
@@ -925,19 +914,19 @@ footer {
       font-size: 18px;
     }
   }
-  
-  .mainBlock7{
+
+  .mainBlock7 {
     max-width: 1200px;
 
-    h2{
+    h2 {
       font-size: 28px;
     }
   }
-  .feedback{
-    h3{
+  .feedback {
+    h3 {
       font-size: 16px;
     }
-    p{
+    p {
       font-size: 16px;
     }
   }
@@ -953,14 +942,13 @@ footer {
   .linkToTheWhatsApp {
     padding: 14px;
   }
-  
-  
+
   .footBlock1 {
     grid-template-columns: 1fr 0.5fr 0.8fr 1fr 0.5fr;
     gap: 30px;
     max-width: 1200px;
-    
-    span{
+
+    span {
       font-size: 13px;
     }
   }
@@ -971,24 +959,277 @@ footer {
       text-align: right;
     }
   }
-  .onUp{
+  .onUp {
     display: flex;
     align-items: center;
-    color: #4B5258;
+    color: #4b5258;
   }
-  #onUpBtn{
+  #onUpBtn {
     display: flex;
     align-items: center;
     cursor: pointer;
   }
 }
 
-@media (max-width: 989px) {
+@media (max-width: 949px) {
   .consultationBtn {
     display: none;
   }
   .headBlock1 {
+    max-width: 1200px;
     grid-template-columns: 1fr 0.8fr 1fr 0.5fr;
+  }
+  .consultationBtn {
+    display: none;
+    padding: 20px;
+    font-size: 12px;
+  }
+  .background {
+    height: 800px;
+  }
+  .logoblock_podblock {
+    h3 {
+      font-size: 18px;
+    }
+    span {
+      font-size: 11px;
+    }
+  }
+  .phoneNumerBlock {
+    h3 {
+      font-size: 16px;
+    }
+  }
+  .workSchedule {
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .background {
+    height: 780px;
+  }
+
+  .background_podblock {
+    width: 1200px;
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+  }
+  .background_btns {
+    display: flex;
+    margin-top: 60px;
+    gap: 10px;
+  }
+  .calculateBtn {
+    padding-block: 28px;
+    padding-inline: 30px;
+    font-size: 14px;
+  }
+  .chooseBtn {
+    padding-block: 28px;
+    padding-inline: 30px;
+    font-size: 14px;
+  }
+
+  .mainBlock1 {
+    max-width: 1200px;
+    grid-template-columns: 1fr;
+  }
+  .quality1 {
+    height: 160px;
+    font-size: 14px;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+  .quality2 {
+    height: 160px;
+    font-size: 14px;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+
+  .mainBlock2 {
+    max-width: 1200px;
+  }
+  nav {
+    a {
+      font-size: 16px;
+    }
+  }
+
+  .mainBlock3 {
+    max-width: 1200px;
+
+    h2 {
+      font-size: 28px;
+    }
+  }
+  .mainBlock3_podBlock1 {
+    width: 60%;
+
+    h3 {
+      font-size: 24px;
+    }
+  }
+  .mainBlock3_podBlock2 {
+    h3 {
+      font-size: 22px;
+      margin-top: 180px;
+    }
+    p {
+      margin: 0;
+    }
+    img {
+      position: absolute;
+    }
+  }
+
+  .mainBlock4 {
+    max-width: 1200px;
+
+    h2 {
+      font-size: 28px;
+    }
+    h3 {
+      font-size: 24px;
+    }
+  }
+  .service {
+    h4 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .priceBlock {
+    padding-block: 22px;
+  }
+
+  .mainBlock5 {
+    max-width: 1200px;
+
+    h2 {
+      font-size: 28px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+  }
+  .mainBlock5_podBlock1 {
+    h3 {
+      font-size: 24px;
+    }
+  }
+  .additionalService {
+    padding: 30px;
+
+    img {
+      width: 70%;
+    }
+
+    h4 {
+      font-size: 16px;
+    }
+
+    h5 {
+      font-size: 20px;
+    }
+  }
+
+  .mainBlock6 {
+    height: 780px;
+  }
+  .costCalculationImg {
+    position: absolute;
+    bottom: 0;
+    right: 6%;
+    width: 60%;
+    z-index: -1;
+  }
+  .mainBlock6_podBlock1 {
+    max-width: 1200px;
+
+    h2 {
+      font-size: 30px;
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+    h4 {
+      font-size: 18px;
+    }
+  }
+
+  .mainBlock7 {
+    max-width: 1200px;
+
+    h2 {
+      font-size: 28px;
+    }
+  }
+  .feedback {
+    h3 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .socialNewtworksBlock2 {
+    h5 {
+      font-size: 12px;
+    }
+  }
+  .linkToTheTelegram {
+    padding: 14px;
+  }
+  .linkToTheWhatsApp {
+    padding: 14px;
+  }
+
+  .footBlock1 {
+    grid-template-columns: 1fr 0.5fr 0.8fr 1fr 0.5fr;
+    gap: 30px;
+    max-width: 1200px;
+
+    span {
+      font-size: 13px;
+    }
+  }
+  .socialNetworksBlock3 {
+    p {
+      font-size: 13px;
+      font-weight: 500;
+      text-align: right;
+    }
+  }
+  .onUp {
+    display: flex;
+    align-items: center;
+    color: #4b5258;
+  }
+  #onUpBtn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
   }
 }
 /* Media queries */
