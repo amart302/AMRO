@@ -19,10 +19,10 @@ costCalculationBtn.addEventListener("click", () => {
 });
 
 const onUpBtn = document.getElementById("onUpBtn");
-const header = document.querySelector("header");
+const background = document.querySelector(".background");
 
 onUpBtn.addEventListener("click", () => {
-  header.scrollIntoView({
+  background.scrollIntoView({
     behavior: "smooth",
     block: "start"
   });
@@ -39,3 +39,38 @@ document.querySelectorAll('a[href^="#"]').forEach(block => {
     });
   });
 });
+
+const burgerMenuBtn = document.querySelector(".burgerMenuBtn");
+const line1 = document.getElementById("line1");
+const line2 = document.getElementById("line2");
+const line3 = document.getElementById("line3");
+let flag = false;
+
+burgerMenuBtn.addEventListener("click", () => {
+  if(!flag){
+    line1.style.top = "7px";
+    line3.style.bottom = "7px";
+    setTimeout(() => {
+      line2.style.display = "none";
+
+      line1.style.rotate = "40deg";
+      line3.style.rotate = "-40deg";
+    }, 200);
+
+    flag = true;
+  }else{
+    line1.style.rotate = "0deg";
+    line3.style.rotate = "0deg";
+    setTimeout(() => {
+      line2.style.display = "block";
+
+      line1.style.top = "0px";
+      line3.style.bottom = "0px";
+    }, 200);
+
+    
+    
+
+    flag = false;
+  }
+})

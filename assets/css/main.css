@@ -9,11 +9,11 @@ body {
 
 /* Header styles */
 header {
-  width: 98%;
+  width: calc(100% - 20px);
   position: absolute;
   top: 0;
   padding-inline: 10px;
-  padding-top: 16px;
+  padding-block: 16px;
 }
 
 .headBlock1 {
@@ -24,7 +24,7 @@ header {
   max-width: 1500px;
   margin-inline: auto;
 }
-.logoblock {
+.logoBlock {
   display: flex;
   gap: 10px;
 
@@ -34,7 +34,7 @@ header {
     border-radius: 50%;
   }
 }
-.logoblock_podblock {
+.logoBlock_podBlock {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -105,15 +105,31 @@ header {
 }
 
 .burgerMenuBtn{
+  height: 16px;
+  position: relative;
   display: none;
-  flex-direction: column;
-  gap: 2px;
+  justify-content: right;
+  align-items: end;
+  gap: 4px;
 }
 .line{
-  width: 14%;
-  height: 4px;
-  background-color: white;
+  width: 30px;
+  height: 2px;
   border-radius: 2px;
+  background-color: rgb(20, 98, 110);
+  transition: all 0.3s;
+}
+#line1{
+  position: absolute;
+  top: 0;
+}
+#line2{
+  position: absolute;
+  top: 7px;
+}
+#line3{
+  position: absolute;
+  bottom: 0;
 }
 /* Header styles */
 
@@ -274,7 +290,7 @@ nav {
   justify-content: center;
   background-color: rgb(20, 98, 110);
   border-radius: 80px;
-  padding-inline: 30px;
+  padding-inline: 20px;
   margin-top: 20px;
 
   h3 {
@@ -438,7 +454,7 @@ nav {
   justify-content: center;
   background-color: rgb(20, 98, 110);
   border-radius: 80px;
-  padding-inline: 10px;
+  padding-inline: 20px;
   margin-top: 20px;
 
   h3 {
@@ -636,7 +652,7 @@ nav {
 
 /* Footer styles */
 footer {
-  width: 98%;
+  width: calc(100% - 20px);
   padding-inline: 10px;
   padding-top: 16px;
   margin: 100px 0 60px 0;
@@ -735,7 +751,7 @@ footer {
   .background {
     height: 800px;
   }
-  .logoblock_podblock {
+  .logoBlock_podBlock {
     h3 {
       font-size: 18px;
     }
@@ -944,8 +960,6 @@ footer {
   }
 
   .footBlock1 {
-    grid-template-columns: 1fr 0.5fr 0.8fr 1fr 0.5fr;
-    gap: 30px;
     max-width: 1200px;
 
     span {
@@ -955,50 +969,54 @@ footer {
   .socialNetworksBlock3 {
     p {
       font-size: 13px;
-      font-weight: 500;
-      text-align: right;
     }
   }
   .onUp {
     display: flex;
     align-items: center;
     color: #4b5258;
-  }
-  #onUpBtn {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+
+    p{
+      font-size: 15px;
+    }
   }
 }
 
+
 @media (max-width: 949px) {
-  .consultationBtn {
-    display: none;
+  header{
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 4;
   }
   .headBlock1 {
-    max-width: 1200px;
-    grid-template-columns: 1fr 0.8fr 1fr 0.5fr;
+    max-width: 950px;
+    grid-template-columns: 1fr 1fr 0.4fr;
   }
+  
   .consultationBtn {
     display: none;
-    padding: 20px;
-    font-size: 12px;
   }
-  .background {
-    height: 800px;
+  .burgerMenuBtn{
+    display: flex;
   }
-  .logoblock_podblock {
+  
+  .logoBlock_podBlock {
     h3 {
-      font-size: 18px;
+      font-size: 15px;
     }
     span {
-      font-size: 11px;
+      font-size: 10px;
     }
   }
   .phoneNumerBlock {
     h3 {
       font-size: 16px;
     }
+  }
+  .socialNetworksBlock {
+    display: none;
   }
   .workSchedule {
     span {
@@ -1007,16 +1025,16 @@ footer {
   }
 
   .background {
-    height: 780px;
+    height: 700px;
   }
 
   .background_podblock {
-    width: 1200px;
+    width: 950px;
     h1 {
-      font-size: 30px;
+      font-size: 20px;
     }
     h2 {
-      font-size: 20px;
+      font-size: 16px;
     }
   }
   .background_btns {
@@ -1025,23 +1043,30 @@ footer {
     gap: 10px;
   }
   .calculateBtn {
-    padding-block: 28px;
-    padding-inline: 30px;
-    font-size: 14px;
+    padding-block: 20px;
+    padding-inline: 22px;
+    font-size: 12px;
   }
   .chooseBtn {
-    padding-block: 28px;
-    padding-inline: 30px;
-    font-size: 14px;
+    padding-block: 20px;
+    padding-inline: 22px;
+    font-size: 12px;
   }
 
+  main{
+    gap: 80px;
+  }
   .mainBlock1 {
-    max-width: 1200px;
-    grid-template-columns: 1fr;
+    max-width: 950px;
+    grid-template-columns: repeat(1, 1fr);
   }
-  .quality1 {
-    height: 160px;
-    font-size: 14px;
+  .quality {
+    height: 200px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    padding-inline: 30px;
+    font-size: 18px;
 
     img {
       position: absolute;
@@ -1050,45 +1075,30 @@ footer {
       z-index: 1;
     }
   }
-  .quality2 {
-    height: 160px;
-    font-size: 14px;
 
-    img {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: 1;
-    }
-  }
-
-  .mainBlock2 {
-    max-width: 1200px;
-  }
-  nav {
-    a {
-      font-size: 16px;
-    }
+  #navigation {
+    display: none;
   }
 
   .mainBlock3 {
-    max-width: 1200px;
+    max-width: 950px;
 
     h2 {
-      font-size: 28px;
+      font-size: 20px;
     }
   }
   .mainBlock3_podBlock1 {
-    width: 60%;
+    width: 84%;
 
     h3 {
-      font-size: 24px;
+      font-size: 15px;
     }
   }
   .mainBlock3_podBlock2 {
+    grid-template-columns: 1fr;
     h3 {
-      font-size: 22px;
-      margin-top: 180px;
+      font-size: 18px;
+      margin-top: 166px;
     }
     p {
       margin: 0;
@@ -1099,42 +1109,51 @@ footer {
   }
 
   .mainBlock4 {
-    max-width: 1200px;
+    max-width: 950px;
 
     h2 {
-      font-size: 28px;
+      font-size: 20px;
     }
     h3 {
-      font-size: 24px;
+      font-size: 18px;
     }
+  }
+  .mainBlock4_podBlock1{
+    grid-template-columns: 1fr;
   }
   .service {
     h4 {
-      font-size: 20px;
+      font-size: 18px;
     }
     p {
       font-size: 16px;
+      margin-bottom: 140px;
     }
   }
   .priceBlock {
-    padding-block: 22px;
+    padding-block: 18px;
   }
 
   .mainBlock5 {
-    max-width: 1200px;
+    max-width: 950px;
 
     h2 {
-      font-size: 28px;
+      font-size: 20px;
     }
 
     h3 {
-      font-size: 24px;
+      font-size: 18px;
     }
   }
   .mainBlock5_podBlock1 {
+    width: 84%;
+
     h3 {
-      font-size: 24px;
+      font-size: 15px;
     }
+  }
+  .mainBlock5_podBlock2{
+    grid-template-columns: 1fr;
   }
   .additionalService {
     padding: 30px;
@@ -1144,45 +1163,58 @@ footer {
     }
 
     h4 {
-      font-size: 16px;
+      font-size: 14px;
     }
 
     h5 {
-      font-size: 20px;
+      font-size: 16px;
     }
   }
 
   .mainBlock6 {
-    height: 780px;
+    height: 600px;
   }
   .costCalculationImg {
-    position: absolute;
-    bottom: 0;
-    right: 6%;
-    width: 60%;
-    z-index: -1;
+    display: none;
   }
   .mainBlock6_podBlock1 {
-    max-width: 1200px;
+    max-width: 950px;
 
     h2 {
-      font-size: 30px;
+      font-size: 20px;
     }
 
     h3 {
-      font-size: 22px;
+      font-size: 14px;
     }
     h4 {
-      font-size: 18px;
+      font-size: 14px;
     }
   }
 
+  .socialNewtworksBlock2 {
+    width: 84%;
+
+    h5 {
+      font-size: 12px;
+    }
+  }
+  .linkToTheTelegram {
+    padding: 10px;
+  }
+  .linkToTheWhatsApp {
+    padding: 10px;
+  }
+
   .mainBlock7 {
-    max-width: 1200px;
+    max-width: 950px;
 
     h2 {
       font-size: 28px;
     }
+  }
+  .mainBlock7_podBlock1{
+    grid-template-columns: 1fr;
   }
   .feedback {
     h3 {
@@ -1193,28 +1225,21 @@ footer {
     }
   }
 
-  .socialNewtworksBlock2 {
-    h5 {
-      font-size: 12px;
-    }
-  }
-  .linkToTheTelegram {
-    padding: 14px;
-  }
-  .linkToTheWhatsApp {
-    padding: 14px;
-  }
-
+  
   .footBlock1 {
-    grid-template-columns: 1fr 0.5fr 0.8fr 1fr 0.5fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    max-width: 1200px;
+    max-width: 950px;
 
     span {
       font-size: 13px;
     }
   }
+  .bankingDetailsAndPolicy{
+    display: none;
+  }
   .socialNetworksBlock3 {
+    display: none;
     p {
       font-size: 13px;
       font-weight: 500;
@@ -1232,4 +1257,5 @@ footer {
     cursor: pointer;
   }
 }
+
 /* Media queries */
