@@ -14,6 +14,7 @@ header {
   top: 0;
   padding-inline: 10px;
   padding-block: 16px;
+  transition: all 0.3s;
 }
 
 .headBlock1 {
@@ -133,6 +134,39 @@ header {
 }
 /* Header styles */
 
+.mobileNavigationBlock{
+  width: calc(100% - 40px);
+  padding-inline: 20px;
+  padding-block: 10px;
+  display: none;
+  position: fixed;
+  top: 80px;
+  background-color: white;
+  z-index: 4;
+  opacity: 0;
+  transition: all 0.4s;
+
+  nav{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 10px;
+
+    a{
+      color: #4b5258;
+      text-decoration: none;
+      padding: 10px;
+    }
+  }
+
+  .socialNetworksBlock{
+    display: flex;
+    color: #4b5258;
+  }
+}
+
+
 .background {
   display: flex;
   align-items: center;
@@ -147,12 +181,14 @@ header {
   margin-inline: auto;
   padding-inline: 10px;
   h1 {
+    width: 810px;
     font-size: 40px;
     font-weight: 600;
     color: #4b5258;
-    margin-top: 100px;
+    margin-top: 130px;
   }
   h2 {
+    width: 750px;
     font-size: 22px;
     font-weight: 400;
     color: #4b5258;
@@ -231,16 +267,16 @@ main {
   }
 }
 .qualityImg1 {
-  width: 36%;
+  width: 110px;
 }
 .qualityImg2 {
-  width: 32%;
+  width: 100px;
 }
 .qualityImg3 {
-  width: 46%;
+  width: 140px;
 }
 .qualityImg4 {
-  width: 46%;
+  width: 140px;
 }
 /* Main Block 2 */
 .mainBlock2 {
@@ -248,17 +284,18 @@ main {
   margin-inline: auto;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
   border-radius: 50px;
-}
-nav {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 4px;
+
+  nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+  }
 
   a {
     font-size: 18px;
     margin: 0;
     text-align: center;
-    color: black;
+    color: #4b5258;
     text-decoration: none;
     padding-block: 40px;
     transition: all 0.4s;
@@ -266,6 +303,7 @@ nav {
     cursor: pointer;
   }
 }
+
 
 /* Main Block 3 */
 .mainBlock3 {
@@ -316,9 +354,29 @@ nav {
   p {
     margin: 0;
   }
-  img {
+  img{
     position: absolute;
   }
+}
+
+.guarantor2{
+  width: 39%; top: 7%; left: 0; 
+  z-index: 2;
+}
+.tablet{
+
+}
+.bottle1{
+
+}
+.bottle2{
+
+}
+.pin{
+
+}
+.shield{
+
 }
 
 .cooperationBlock {
@@ -359,6 +417,7 @@ nav {
     font-weight: 700;
   }
   h3 {
+    width: 840px;
     color: #959a9d;
     font-size: 30px;
     font-weight: 500;
@@ -396,7 +455,7 @@ nav {
     margin-bottom: 180px;
   }
   img {
-    width: 30%;
+    width: 38%;
     border: solid 2px rgb(252, 108, 56);
     border-radius: 50%;
   }
@@ -655,7 +714,7 @@ footer {
   width: calc(100% - 20px);
   padding-inline: 10px;
   padding-top: 16px;
-  margin: 100px 0 60px 0;
+  margin: 60px 0 40px 0;
 }
 
 .footBlock1 {
@@ -739,7 +798,7 @@ footer {
   }
 }
 
-@media (max-width: 1550px) and (min-width: 950px) {
+@media screen and (max-width: 1550px) and (min-width: 950px) {
   .headBlock1 {
     max-width: 1200px;
     grid-template-columns: 0.8fr 0.8fr 1fr 0.6fr;
@@ -806,13 +865,6 @@ footer {
     height: 160px;
     font-size: 14px;
     padding-inline: 20px;
-
-    img {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: 1;
-    }
   }
 
   .mainBlock2 {
@@ -841,7 +893,7 @@ footer {
   .mainBlock3_podBlock2 {
     h3 {
       font-size: 22px;
-      margin-top: 166px;
+      margin-top: 142px;
     }
     p {
       margin: 0;
@@ -961,10 +1013,6 @@ footer {
 
   .footBlock1 {
     max-width: 1200px;
-
-    span {
-      font-size: 13px;
-    }
   }
   .socialNetworksBlock3 {
     p {
@@ -982,8 +1030,7 @@ footer {
   }
 }
 
-
-@media (max-width: 949px) {
+@media screen and (max-width: 950px) and (min-width: 441px) {
   header{
     position: fixed;
     top: 0;
@@ -1004,15 +1051,15 @@ footer {
   
   .logoBlock_podBlock {
     h3 {
-      font-size: 15px;
+      font-size: 13px;
     }
     span {
-      font-size: 10px;
+      font-size: 8px;
     }
   }
   .phoneNumerBlock {
     h3 {
-      font-size: 16px;
+      font-size: 12px;
     }
   }
   .socialNetworksBlock {
@@ -1020,7 +1067,7 @@ footer {
   }
   .workSchedule {
     span {
-      font-size: 12px;
+      font-size: 9px;
     }
   }
 
@@ -1031,9 +1078,266 @@ footer {
   .background_podblock {
     width: 950px;
     h1 {
+      width: 84%;
       font-size: 20px;
     }
     h2 {
+      width: 84%;
+      font-size: 16px;
+    }
+  }
+  .background_btns {
+    display: flex;
+    margin-top: 60px;
+    gap: 10px;
+  }
+  .calculateBtn {
+    padding-block: 20px;
+    padding-inline: 22px;
+    font-size: 12px;
+  }
+  .chooseBtn {
+    padding-block: 20px;
+    padding-inline: 22px;
+    font-size: 12px;
+  }
+
+  main{
+    gap: 80px;
+  }
+  .mainBlock1 {
+    max-width: 950px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .quality {
+    height: 160px;
+    font-size: 14px;
+    padding-inline: 20px;
+  }
+  
+  #navigation {
+    display: none;
+  }
+
+  .mainBlock3 {
+    max-width: 950px;
+
+    h2 {
+      font-size: 20px;
+    }
+  }
+  .mainBlock3_podBlock1 {
+    width: 84%;
+
+    h3 {
+      font-size: 15px;
+    }
+  }
+  .mainBlock3_podBlock2 {
+    grid-template-columns: 1fr;
+    h3 {
+      font-size: 18px;
+      margin-top: 52%;
+    }
+    p {
+      margin: 0;
+    }
+    img {
+      position: absolute;
+    }
+  }
+
+  .mainBlock4 {
+    max-width: 950px;
+
+    h2 {
+      font-size: 20px;
+    }
+    h3 {
+      width: 100%;
+      font-size: 18px;
+    }
+  }
+  .mainBlock4_podBlock1{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .service {
+    h4 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 140px;
+    }
+  }
+  .priceBlock {
+    padding-block: 18px;
+  }
+
+  .mainBlock5 {
+    max-width: 950px;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+  }
+  .mainBlock5_podBlock1 {
+    width: 84%;
+
+    h3 {
+      font-size: 15px;
+    }
+  }
+  .mainBlock5_podBlock2{
+    grid-template-columns: 1fr;
+  }
+
+  .additionalService {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+    img {
+      width: 80px;
+    }
+  
+    h4 {
+      font-size: 16px;
+    }
+  
+    h5 {
+      font-size: 18px;
+    }
+  }
+  .mainBlock6 {
+    height: 600px;
+  }
+  .costCalculationImg {
+    display: none;
+  }
+  .mainBlock6_podBlock1 {
+    max-width: 950px;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    h3 {
+      font-size: 14px;
+    }
+    h4 {
+      font-size: 14px;
+    }
+  }
+
+  .socialNewtworksBlock2 {
+    width: 84%;
+
+    h5 {
+      font-size: 12px;
+    }
+  }
+  .linkToTheTelegram {
+    padding: 10px;
+  }
+  .linkToTheWhatsApp {
+    padding: 10px;
+  }
+
+  .mainBlock7 {
+    max-width: 950px;
+
+    h2 {
+      font-size: 28px;
+    }
+  }
+  .mainBlock7_podBlock1{
+    grid-template-columns: 1fr;
+  }
+  .feedback {
+    h3 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+
+  
+  .footBlock1 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 950px;
+  }
+  .bankingDetailsAndPolicy{
+    display: none;
+  }
+  .socialNetworksBlock3 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  header{
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 4;
+  }
+  .headBlock1 {
+    max-width: 950px;
+    grid-template-columns: 1fr 1fr 0.4fr;
+  }
+  
+  .consultationBtn {
+    display: none;
+  }
+  .burgerMenuBtn{
+    display: flex;
+  }
+  
+  .logoBlock_podBlock {
+    h3 {
+      font-size: 13px;
+    }
+    span {
+      font-size: 8px;
+    }
+  }
+  .phoneNumerBlock {
+    h3 {
+      font-size: 12px;
+    }
+  }
+  .socialNetworksBlock {
+    display: none;
+  }
+  .workSchedule {
+    span {
+      font-size: 9px;
+    }
+  }
+
+  .background {
+    height: 700px;
+  }
+
+  .background_podblock {
+    width: 950px;
+    h1 {
+      width: 84%;
+      font-size: 20px;
+    }
+    h2 {
+      width: 84%;
       font-size: 16px;
     }
   }
@@ -1061,19 +1365,9 @@ footer {
     grid-template-columns: repeat(1, 1fr);
   }
   .quality {
-    height: 200px;
-    border-radius: 30px;
-    overflow: hidden;
-    position: relative;
-    padding-inline: 30px;
-    font-size: 18px;
-
-    img {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: 1;
-    }
+    height: 160px;
+    font-size: 16px;
+    padding-inline: 20px;
   }
 
   #navigation {
@@ -1098,7 +1392,7 @@ footer {
     grid-template-columns: 1fr;
     h3 {
       font-size: 18px;
-      margin-top: 166px;
+      margin-top: 60%;
     }
     p {
       margin: 0;
@@ -1115,6 +1409,7 @@ footer {
       font-size: 20px;
     }
     h3 {
+      width: 100%;
       font-size: 18px;
     }
   }
@@ -1228,34 +1523,13 @@ footer {
   
   .footBlock1 {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
     max-width: 950px;
-
-    span {
-      font-size: 13px;
-    }
   }
   .bankingDetailsAndPolicy{
     display: none;
   }
   .socialNetworksBlock3 {
     display: none;
-    p {
-      font-size: 13px;
-      font-weight: 500;
-      text-align: right;
-    }
-  }
-  .onUp {
-    display: flex;
-    align-items: center;
-    color: #4b5258;
-  }
-  #onUpBtn {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
   }
 }
-
 /* Media queries */
