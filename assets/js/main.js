@@ -113,10 +113,10 @@ const header = document.querySelector("header");
 window.onscroll = function() {
     const currentScrollPos = window.pageYOffset;
 
-    if (prevScrollPos > currentScrollPos) {
-        header.style.top = "0";
+    if (prevScrollPos < currentScrollPos && !flag) {
+      header.style.top = "-92px";
     } else {
-        header.style.top = "-92px";
+      header.style.top = "0";
     }
 
     prevScrollPos = currentScrollPos;
