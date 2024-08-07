@@ -1,3 +1,29 @@
+// let region = sessionStorage.getItem("region");
+// const choosingARegionParentBlock = document.querySelector(".choosingARegionParentBlock");
+// if(region == 'null'){
+//   setTimeout(() => {
+//     choosingARegionParentBlock.style.display = "flex";
+//     setTimeout(() => {
+//       choosingARegionParentBlock.style.opacity = 1;
+//     }, 100)
+//     document.body.style.overflow = 'hidden';
+//   }, 200)
+// }
+
+// const choosingARegionBtns = document.querySelectorAll(".choosingARegionBtn");
+
+// choosingARegionBtns.forEach(btn => {
+//   btn.addEventListener("click", () => {
+//     sessionStorage.setItem("region", btn.innerHTML);
+//     document.body.style.overflow = 'auto';
+
+//     choosingARegionParentBlock.style.opacity = 0;
+//     setTimeout(() => {
+//       choosingARegionParentBlock.style.display = "none";
+//     }, 100)
+//   })
+// })
+
 const chooseBtn = document.getElementById("chooseBtn");
 const howDoWeCleaning = document.getElementById("howDoWeCleaning");
 
@@ -5,8 +31,8 @@ chooseBtn.addEventListener("click", () => {
   howDoWeCleaning.scrollIntoView({
     behavior: "smooth",
     block: "start"
-  });
-});
+  })
+})
 
 const costCalculationBtn = document.getElementById("costCalculationBtn");
 const costCalculation = document.getElementById("costCalculation");
@@ -15,8 +41,8 @@ costCalculationBtn.addEventListener("click", () => {
   costCalculation.scrollIntoView({
     behavior: "smooth",
     block: "start"
-  });
-});
+  })
+})
 
 const onUpBtn = document.getElementById("onUpBtn");
 const background = document.querySelector(".background");
@@ -25,8 +51,8 @@ onUpBtn.addEventListener("click", () => {
   background.scrollIntoView({
     behavior: "smooth",
     block: "start"
-  });
-});
+  })
+})
 
 
 const burgerMenuBtn = document.querySelector(".burgerMenuBtn");
@@ -94,7 +120,7 @@ document.querySelectorAll('a[href^="#"]').forEach(block => {
     document.querySelector(href).scrollIntoView({
       behavior: 'smooth',
       block: "start"
-    });
+    })
     
     if(window.innerWidth < 950){
       setTimeout(() => {
@@ -102,9 +128,9 @@ document.querySelectorAll('a[href^="#"]').forEach(block => {
       }, 800);
       
       burgerMenu();
-    };
+    }
 
-  });
+  })
 })
 
 let prevScrollPos = window.pageYOffset;

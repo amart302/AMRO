@@ -166,6 +166,46 @@ header {
   }
 }
 
+.choosingARegionParentBlock{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.178);
+  padding-inline: 10px;
+  transition: all 0.2s;
+  opacity: 0;
+  z-index: 5;
+}
+.choosingARegionBlock{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
+
+  h3{
+    color: #4b5258;
+    font-size: 26px;
+    margin-top: 0;
+  }
+}
+.choosingARegionBtn{
+  border: none;
+  background: transparent;
+  padding: 10px;
+  border-radius: 12px;
+  transition: all 0.2s;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 10px;
+  cursor: pointer;
+}
+
+
 .background {
   display: flex;
   align-items: center;
@@ -184,7 +224,7 @@ header {
     font-size: 40px;
     font-weight: 600;
     color: #4b5258;
-    margin-top: 130px;
+    margin-top: 120px;
   }
   h2 {
     width: 750px;
@@ -773,6 +813,10 @@ footer {
 
 /* Media queries */
 @media (hover: hover) {
+  .choosingARegionBtn:hover{
+    background-color: rgb(18, 82, 92);
+    color: white;
+  }
   .consultationBtn:hover {
     background-color: rgb(20, 98, 110);
     color: white;
@@ -796,6 +840,10 @@ footer {
   }
 }
 @media (hover: none) {
+  .choosingARegionBtn:active{
+    background-color: rgb(18, 82, 92);
+    color: white;
+  }
   .consultationBtn:active {
     background-color: rgb(20, 98, 110);
     color: white;
@@ -1061,7 +1109,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 950px) and (min-width: 441px) {
+@media screen and (max-width: 950px) and (min-width: 601px) {
   header {
     position: fixed;
     top: 0;
@@ -1239,18 +1287,12 @@ footer {
     }
   }
   .mainBlock5_podBlock2 {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .additionalService {
-    display: grid;
     grid-template-columns: 0.4fr 1fr;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 50px;
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 30px;
 
     img {
       width: 80px;
@@ -1286,7 +1328,8 @@ footer {
   }
 
   .socialNewtworksBlock2 {
-    width: 84%;
+    width: 91%;
+    margin-inline: auto;
 
     h5 {
       font-size: 12px;
@@ -1330,7 +1373,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 600px) {
   header {
     position: fixed;
     top: 0;
@@ -1460,6 +1503,7 @@ footer {
   }
   .shield {
     width: 140px;
+    left: 33%;
   }
 
   .mainBlock4 {
@@ -1548,7 +1592,8 @@ footer {
   }
 
   .socialNewtworksBlock2 {
-    width: 84%;
+    width: calc(100% - 60px);
+    margin-inline: auto;
 
     h5 {
       font-size: 12px;
