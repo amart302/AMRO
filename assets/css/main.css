@@ -1328,7 +1328,7 @@ footer {
   }
 
   .socialNewtworksBlock2 {
-    width: 91%;
+    width: calc(100% - 60px);
     margin-inline: auto;
 
     h5 {
