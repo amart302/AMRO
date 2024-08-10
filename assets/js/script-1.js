@@ -1,29 +1,3 @@
-// let region = sessionStorage.getItem("region");
-// const choosingARegionParentBlock = document.querySelector(".choosingARegionParentBlock");
-// if(region == 'null'){
-//   setTimeout(() => {
-//     choosingARegionParentBlock.style.display = "flex";
-//     setTimeout(() => {
-//       choosingARegionParentBlock.style.opacity = 1;
-//     }, 100)
-//     document.body.style.overflow = 'hidden';
-//   }, 200)
-// }
-
-// const choosingARegionBtns = document.querySelectorAll(".choosingARegionBtn");
-
-// choosingARegionBtns.forEach(btn => {
-//   btn.addEventListener("click", () => {
-//     sessionStorage.setItem("region", btn.innerHTML);
-//     document.body.style.overflow = 'auto';
-
-//     choosingARegionParentBlock.style.opacity = 0;
-//     setTimeout(() => {
-//       choosingARegionParentBlock.style.display = "none";
-//     }, 100)
-//   })
-// })
-
 const chooseBtn = document.getElementById("chooseBtn");
 const howDoWeCleaning = document.getElementById("howDoWeCleaning");
 
