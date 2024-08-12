@@ -93,7 +93,7 @@ header {
     text-align: right;
   }
 }
-.consultationBtn {
+.changeTheRegionBtn, .changeTheRegionBtn2 {
   background: transparent;
   padding: 18px;
   border: solid 1px rgb(20, 98, 110);
@@ -139,6 +139,9 @@ header {
   padding-inline: 20px;
   padding-block: 10px;
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 80px;
   background-color: white;
@@ -166,12 +169,12 @@ header {
   }
 }
 
-.choosingARegionParentBlock{
+.choosingARegionParentBlock {
   display: none;
   align-items: center;
   justify-content: center;
   position: fixed;
-  width: 100%;
+  width: calc(100% - 20px);
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.178);
   padding-inline: 10px;
@@ -179,7 +182,7 @@ header {
   opacity: 0;
   z-index: 5;
 }
-.choosingARegionBlock{
+.choosingARegionBlock {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -189,13 +192,13 @@ header {
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
 
-  h3{
+  h3 {
     color: #4b5258;
     font-size: 26px;
     margin-top: 0;
   }
 }
-.choosingARegionBtn{
+.choosingARegionBtn {
   border: none;
   background: transparent;
   padding: 10px;
@@ -204,7 +207,6 @@ header {
   box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 10px;
   cursor: pointer;
 }
-
 
 .background {
   display: flex;
@@ -510,7 +512,8 @@ main {
     margin-bottom: 180px;
   }
   img {
-    width: 38%;
+    width: 172px;
+    height: 172px;
     border: solid 2px rgb(252, 108, 56);
     border-radius: 50%;
   }
@@ -813,11 +816,11 @@ footer {
 
 /* Media queries */
 @media (hover: hover) {
-  .choosingARegionBtn:hover{
+  .choosingARegionBtn:hover {
     background-color: rgb(18, 82, 92);
     color: white;
   }
-  .consultationBtn:hover {
+  .changeTheRegionBtn:hover {
     background-color: rgb(20, 98, 110);
     color: white;
   }
@@ -840,11 +843,11 @@ footer {
   }
 }
 @media (hover: none) {
-  .choosingARegionBtn:active{
+  .choosingARegionBtn:active {
     background-color: rgb(18, 82, 92);
     color: white;
   }
-  .consultationBtn:active {
+  .changeTheRegionBtn:active, .changeTheRegionBtn2:active {
     background-color: rgb(20, 98, 110);
     color: white;
   }
@@ -981,7 +984,7 @@ footer {
   .shield {
     width: 138px;
   }
-  
+
   .mainBlock4 {
     max-width: 1200px;
 
@@ -999,6 +1002,10 @@ footer {
     p {
       font-size: 16px;
       margin-bottom: 140px;
+    }
+    img{
+      width: 134px;
+      height: 134px;
     }
   }
   .priceBlock {
@@ -1121,7 +1128,7 @@ footer {
     grid-template-columns: 1fr 1fr 0.4fr;
   }
 
-  .consultationBtn {
+  .changeTheRegionBtn {
     display: none;
   }
   .burgerMenuBtn {
@@ -1263,6 +1270,10 @@ footer {
       font-size: 16px;
       margin-bottom: 140px;
     }
+    img{
+      width: 148px;
+      height: 148px;
+    }
   }
   .priceBlock {
     padding-block: 18px;
@@ -1385,7 +1396,7 @@ footer {
     grid-template-columns: 1fr 1fr 0.4fr;
   }
 
-  .consultationBtn {
+  .changeTheRegionBtn {
     display: none;
   }
   .burgerMenuBtn {
@@ -1527,6 +1538,10 @@ footer {
     p {
       font-size: 16px;
       margin-bottom: 140px;
+    }
+    img {
+      height: 146px;
+      width: 146px;
     }
   }
   .priceBlock {

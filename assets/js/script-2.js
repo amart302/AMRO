@@ -6,13 +6,13 @@ const contacts = [
     linkToWhatsApp: "https://wa.me/+79280995551",
   },
   {
-    title: "Ингушетия",
+    title: "Республика Ингушетия",
     phoneNumber: "8-938-007-03-04",
     linkToTelegram: "",
     linkToWhatsApp: "https://wa.me/+79380070304",
   },
   {
-    title: "Чечня",
+    title: "Чеченская Республика",
     phoneNumber: "8-938-887-01-02",
     linkToTelegram: "",
     linkToWhatsApp: "https://wa.me/+79388870102",
@@ -20,7 +20,12 @@ const contacts = [
 ];
 
 let region = sessionStorage.getItem("region");
-
+const choosingARegionBtns = document.querySelectorAll(".choosingARegionBtn");
+const phoneNumber = document.getElementById("phoneNumber");
+const linkTgs = document.querySelectorAll(".linkTg");
+const linkWas = document.querySelectorAll(".linkWa");
+const changeTheRegionBtn = document.querySelector(".changeTheRegionBtn");
+const changeTheRegionBtn2 = document.querySelector(".changeTheRegionBtn2");
 
 const choosingARegionParentBlock = document.querySelector(
   ".choosingARegionParentBlock"
@@ -33,17 +38,21 @@ if (!region) {
     }, 100);
     document.body.style.overflow = "hidden";
   }, 200);
+}else{
+  changingTheNumberAndLinks();
 }
-
-const choosingARegionBtns = document.querySelectorAll(".choosingARegionBtn");
-const phoneNumber = document.getElementById("phoneNumber");
-const linkTgs = document.querySelectorAll(".linkTg");
-const linkWas = document.querySelectorAll(".linkWa");
 
 choosingARegionBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
+    sessionStorage.setItem("region", null);
+    region = sessionStorage.getItem("region");
+
     sessionStorage.setItem("region", btn.innerHTML);
     region = sessionStorage.getItem("region");
+
+    changeTheRegionBtn.innerHTML = `Сменить регион<br>Регион: ${region}`;
+    changeTheRegionBtn2.innerHTML = `Сменить регион<br>Регион: ${region}`;
+    
     document.body.style.overflow = "auto";
 
     choosingARegionParentBlock.style.opacity = 0;
@@ -69,3 +78,22 @@ function changingTheNumberAndLinks(){
         }
     }
 }
+
+
+changeTheRegionBtn.addEventListener("click", () => {
+  document.body.style.overflow = "hidden";
+
+  choosingARegionParentBlock.style.display = "flex";
+  setTimeout(() => {
+    choosingARegionParentBlock.style.opacity = 1;
+    }, 100);
+});
+
+changeTheRegionBtn2.addEventListener("click", () => {
+  document.body.style.overflow = "hidden";
+
+  choosingARegionParentBlock.style.display = "flex";
+  setTimeout(() => {
+    choosingARegionParentBlock.style.opacity = 1;
+    }, 100);
+});

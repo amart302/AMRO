@@ -38,7 +38,7 @@ let flag = false;
 
 function burgerMenu(){
   if(!flag){
-    mobileNavigationBlock.style.display = "block";
+    mobileNavigationBlock.style.display = "flex";
 
     line1.style.top = "7px";
     line3.style.bottom = "7px";
