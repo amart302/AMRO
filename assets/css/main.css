@@ -39,17 +39,17 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  h3 {
-    margin: 0;
-    font-size: 20px;
-    font-weight: 600;
-    color: rgb(20, 98, 110);
-  }
   span {
     margin: 0;
     font-size: 14px;
     color: #959a9d;
   }
+}
+.companyName {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(20, 98, 110);
 }
 .phoneNumerBlock {
   display: flex;
@@ -877,12 +877,12 @@ footer {
     height: 800px;
   }
   .logoBlock_podBlock {
-    h3 {
-      font-size: 18px;
-    }
     span {
       font-size: 11px;
     }
+  }
+  .companyName {
+    font-size: 18px;
   }
   .phoneNumerBlock {
     h3 {
@@ -1134,14 +1134,13 @@ footer {
   .burgerMenuBtn {
     display: flex;
   }
-
   .logoBlock_podBlock {
-    h3 {
-      font-size: 13px;
-    }
     span {
       font-size: 8px;
     }
+  }
+  .companyName {
+    font-size: 13px;
   }
   .phoneNumerBlock {
     h3 {
@@ -1402,14 +1401,13 @@ footer {
   .burgerMenuBtn {
     display: flex;
   }
-
   .logoBlock_podBlock {
-    h3 {
-      font-size: 13px;
-    }
     span {
       font-size: 8px;
     }
+  }
+  .companyName {
+    font-size: 13px;
   }
   .phoneNumerBlock {
     h3 {
