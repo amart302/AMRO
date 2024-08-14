@@ -26,6 +26,9 @@ const linkTgs = document.querySelectorAll(".linkTg");
 const linkWas = document.querySelectorAll(".linkWa");
 const changeTheRegionBtn = document.querySelector(".changeTheRegionBtn");
 const changeTheRegionBtn2 = document.querySelector(".changeTheRegionBtn2");
+if(!region){
+
+}
 
 const choosingARegionParentBlock = document.querySelector(
   ".choosingARegionParentBlock"
@@ -39,6 +42,8 @@ if (!region) {
     document.body.style.overflow = "hidden";
   }, 200);
 }else{
+  changeTheRegionBtn.innerHTML = `Сменить регион<br>Регион: ${region}`;
+  changeTheRegionBtn2.innerHTML = `Сменить регион<br>Регион: ${region}`;
   changingTheNumberAndLinks();
 }
 
