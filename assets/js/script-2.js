@@ -34,13 +34,11 @@ const choosingARegionParentBlock = document.querySelector(
   ".choosingARegionParentBlock"
 );
 if (!region) {
-  setTimeout(() => {
     choosingARegionParentBlock.style.display = "flex";
     setTimeout(() => {
       choosingARegionParentBlock.style.opacity = 1;
     }, 100);
     document.body.style.overflow = "hidden";
-  }, 200);
 }else{
   changeTheRegionBtn.innerHTML = `Сменить регион<br>Регион: ${region}`;
   changeTheRegionBtn2.innerHTML = `Сменить регион<br>Регион: ${region}`;

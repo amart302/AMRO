@@ -336,6 +336,9 @@ main {
     font-size: 18px;
     margin: 0;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #4b5258;
     text-decoration: none;
     padding-block: 40px;
