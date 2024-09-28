@@ -217,7 +217,7 @@ window.onscroll = function() {
     const currentScrollPos = window.pageYOffset;
 
     if (prevScrollPos < currentScrollPos && !flag) {
-      header.style.top = "-92px";
+      header.style.top = "-110px";
     } else {
       header.style.top = "0";
     }
