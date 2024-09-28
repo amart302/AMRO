@@ -149,7 +149,7 @@ header {
   z-index: 4;
   opacity: 0;
   transition: all 0.4s;
-  box-shadow: 0px 10px 10px 0px rgba(34, 60, 80, 0.18);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   nav {
     width: 100%;
@@ -1128,6 +1128,7 @@ footer {
     top: 0;
     background-color: white;
     z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   .headBlock1 {
     max-width: 950px;
@@ -1395,6 +1396,7 @@ footer {
     top: 0;
     background-color: white;
     z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   .headBlock1 {
     max-width: 950px;
