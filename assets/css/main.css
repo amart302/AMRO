@@ -56,7 +56,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  h3 {
+  a {
     margin: 0;
     font-size: 18px;
     font-weight: 600;
@@ -891,7 +891,7 @@ footer {
     font-size: 18px;
   }
   .phoneNumerBlock {
-    h3 {
+    a {
       font-size: 16px;
     }
   }
@@ -1143,15 +1143,15 @@ footer {
   }
   .logoBlock_podBlock {
     span {
-      font-size: 8px;
+      font-size: 10px;
     }
   }
   .companyName {
-    font-size: 13px;
+    font-size: 16px;
   }
   .phoneNumerBlock {
-    h3 {
-      font-size: 12px;
+    a {
+      font-size: 14px;
     }
   }
   .socialNetworksBlock {
@@ -1159,7 +1159,7 @@ footer {
   }
   .workSchedule {
     span {
-      font-size: 9px;
+      font-size: 11px;
     }
   }
 
@@ -1415,11 +1415,11 @@ footer {
     }
   }
   .companyName {
-    font-size: 13px;
+    font-size: 16px;
   }
   .phoneNumerBlock {
-    h3 {
-      font-size: 12px;
+    a {
+      font-size: 14px;
     }
   }
   .socialNetworksBlock {
@@ -1427,7 +1427,7 @@ footer {
   }
   .workSchedule {
     span {
-      font-size: 9px;
+      font-size: 11px;
     }
   }
   .background {

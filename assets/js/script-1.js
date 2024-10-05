@@ -26,9 +26,6 @@ const linkTgs = document.querySelectorAll(".linkTg");
 const linkWas = document.querySelectorAll(".linkWa");
 const changeTheRegionBtn = document.querySelector(".changeTheRegionBtn");
 const changeTheRegionBtn2 = document.querySelector(".changeTheRegionBtn2");
-if(!region){
-
-}
 
 const choosingARegionParentBlock = document.querySelector(
   ".choosingARegionParentBlock"
@@ -70,7 +67,8 @@ function changingTheNumberAndLinks(){
     for(let i = 0; i < contacts.length; i++){
         if(contacts[i].title == region){
             phoneNumber.innerHTML = contacts[i].phoneNumber;
-            
+            phoneNumber.href = `tel:${contacts[i].phoneNumber}`;
+
             linkTgs.forEach(link => {
                 link.href = contacts[i].linkToTelegram;
             });
