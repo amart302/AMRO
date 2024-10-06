@@ -21,7 +21,6 @@ header {
   display: grid;
   grid-template-columns: 1fr 0.8fr 1fr 0.5fr;
   align-items: center;
-  gap: 30px;
   max-width: 1500px;
   margin-inline: auto;
 }
@@ -1132,7 +1131,7 @@ footer {
   }
   .headBlock1 {
     max-width: 950px;
-    grid-template-columns: 1fr 1fr 0.4fr;
+    grid-template-columns: 1fr 1fr 0.3fr;
   }
 
   .changeTheRegionBtn {
@@ -1400,7 +1399,7 @@ footer {
   }
   .headBlock1 {
     max-width: 950px;
-    grid-template-columns: 1fr 1fr 0.4fr;
+    grid-template-columns: 1fr 1fr 0.3fr;
   }
 
   .changeTheRegionBtn {
@@ -1419,7 +1418,7 @@ footer {
   }
   .phoneNumerBlock {
     a {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
   .socialNetworksBlock {
@@ -1427,7 +1426,7 @@ footer {
   }
   .workSchedule {
     span {
-      font-size: 11px;
+      font-size: 10px;
     }
   }
   .background {
