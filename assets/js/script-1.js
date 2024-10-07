@@ -2,13 +2,13 @@ const contacts = [
   {
     title: "Республика Ингушетия",
     phoneNumber: "8-938-007-03-04",
-    linkToTelegram: "",
+    linkToTelegram: "https://t.me/amarthh",
     linkToWhatsApp: "https://wa.me/+79380070304",
   },
   {
     title: "Чеченская Республика",
     phoneNumber: "8-938-887-01-02",
-    linkToTelegram: "",
+    linkToTelegram: "https://t.me/amarthh",
     linkToWhatsApp: "https://wa.me/+79388870102",
   },
 ];
