@@ -1,5 +1,11 @@
 const contacts = [
   {
+    title: "Москва",
+    phoneNumber: "8-928-099-55-51",
+    linkToTelegram: "",
+    linkToWhatsApp: "https://wa.me/+79280995551",
+  },
+  {
     title: "Республика Ингушетия",
     phoneNumber: "8-938-007-03-04",
     linkToTelegram: "https://t.me/amarthh",
