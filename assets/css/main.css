@@ -86,7 +86,10 @@ header {
   font-weight: 500;
   text-align: right;
 }
-.socialNetworksBlock a{
+.socialNetworksBlock img, .socialNetworksBlock2 img, .socialNetworksBlock3 img{
+  width: 24px;
+}
+.socialNetworksBlock a, .socialNetworksBlock2 a, .socialNetworksBlock3 a{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,6 +173,7 @@ header {
   color: var(--text-color2);
   text-decoration: none;
   padding: 10px;
+  transition: all 0.2s;
 }
 
 .mobileNavigationBlock .socialNetworksBlock {
@@ -873,6 +877,9 @@ footer {
 }
 
 @media (hover: hover) {
+  .socialNetworksBlock a:hover, .socialNetworksBlock3 a:hover{
+    transform: scale(1.1);
+  }
   .choosingARegionBtn:hover {
     background-color: rgb(18, 82, 92);
     color: white;
@@ -907,6 +914,9 @@ footer {
 }
 
 @media (hover: none) {
+  .socialNetworksBlock a:active, .socialNetworksBlock3 a:active{
+    transform: scale(1.1);
+  }
   .choosingARegionBtn:active {
     background-color: rgb(18, 82, 92);
     color: white;
