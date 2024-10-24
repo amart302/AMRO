@@ -86,21 +86,14 @@ header {
   font-weight: 500;
   text-align: right;
 }
-.socialNetworksBlock img{
-  width: 24px;
-}
 .socialNetworksBlock a{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   transition: all 0.2s;
-}
-.socialNetworksBlock a:hover{
-  background-color: var(--main-color1);
 }
 
 .changeTheRegionBtn,
@@ -477,6 +470,7 @@ main {
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   overflow: hidden;
+  line-height: 1.5;
 }
 
 .detergentsBlock {
@@ -485,6 +479,7 @@ main {
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   overflow: hidden;
+  line-height: 1.5;
 }
 
 .guaranteeBlock {
@@ -493,6 +488,7 @@ main {
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   overflow: hidden;
+  line-height: 1.5;
 }
 
 .mainBlock4 {
@@ -806,6 +802,7 @@ main {
   padding: 0 16px 16px 16px;
   margin: 0;
   font-size: 18px;
+  line-height: 1.6;
 }
 
 .estimationBlock {
@@ -829,8 +826,9 @@ main {
 footer {
   width: calc(100% - 20px);
   padding-inline: 10px;
-  padding-top: 16px;
+  padding-top: 40px;
   margin: 60px 0 40px 0;
+  border-top: 1px solid rgb(214, 212, 212);
 }
 
 .footBlock1 {
