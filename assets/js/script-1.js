@@ -2,7 +2,7 @@ const contacts = [
   {
     title: "Москва",
     phoneNumber: "8-928-099-55-51",
-    linkToTelegram: "",
+    linkToTelegram: "https://t.me/amarthh",
     linkToWhatsApp: "https://wa.me/+79280995551",
   },
   {
@@ -71,10 +71,12 @@ function changingTheNumberAndLinks(){
 
             linkTgs.forEach(link => {
                 link.href = contacts[i].linkToTelegram;
+                link.target = "_blank";
             });
 
             linkWas.forEach(link => {
                 link.href = contacts[i].linkToWhatsApp;
+                link.target = "_blank";
             });
         }
     }
@@ -199,7 +201,7 @@ document.querySelectorAll('a[href^="#"]').forEach(block => {
     
     if(window.innerWidth < 950){
       setTimeout(() => {
-        header.style.top = "-92px";
+        header.style.top = "-110px";
       }, 800);
       
       burgerMenu();
