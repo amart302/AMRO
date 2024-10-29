@@ -21,7 +21,7 @@ const contacts = [
         linkToTelegram: "https://t.me/amarthh",
         linkToWhatsApp: "https://wa.me/+79388870102",
         latitude: { from: 43.0000, to: 43.5000 },
-        lfongitude: { from: 45.3000, to: 46.0000 }
+        longitude: { from: 45.3000, to: 46.0000 }
     },
 ];
 
@@ -31,13 +31,12 @@ const phoneNumber = document.getElementById("phoneNumber");
 const linkTgs = document.querySelectorAll(".linkTg");
 const linkWas = document.querySelectorAll(".linkWa");
 const changeTheRegionBtn = document.querySelector(".changeTheRegionBtn");
-const changeTheRegionBtn2 = document.querySelector(".changeTheRegionBtn2");
-
 const choosingARegionParentBlock = document.querySelector(".choosingARegionParentBlock");
 
 if (region) {
-    changeTheRegionBtn.innerHTML = `Сменить регион<br>Регион: ${region}`;
-    changeTheRegionBtn2.innerHTML = `Сменить регион<br>Регион: ${region}`;
+    if(region == 'Республика Ингушетия') changeTheRegionBtn.innerHTML = `Респ. Ингушетия`;
+    else if(region == 'Чеченская Республика') changeTheRegionBtn.innerHTML = `Чеченская Респ.`;
+    else changeTheRegionBtn.innerHTML = `Москва`;
     changingTheNumberAndLinks();
 }else{
     window.onload = getLocation;
@@ -62,25 +61,40 @@ function getLocation(){
 function showPosition(position){
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
-    // alert(`Широта: ${latitude} Долгота: ${longitude}`);
-    let check = false;
     for(let i = 0; i < contacts.length; i++){
         if((latitude > contacts[i].latitude.from && latitude < contacts[i].latitude.to) && (longitude > contacts[i].longitude.from && longitude < contacts[i].longitude.to)){
-            const definingRegion = confirm(`Ваш регион: ${contacts[i].region}?`);
-            if(definingRegion){
-                sessionStorage.setItem("region", contacts[i].region);
-                region = sessionStorage.getItem("region");
+            let region = contacts[i].region;
+            
 
-                changeTheRegionBtn.innerHTML = `Сменить регион<br>Регион: ${region}`;
-                changeTheRegionBtn2.innerHTML = `Сменить регион<br>Регион: ${region}`;
+            const confirmationBlockParent = document.createElement('div');
+            confirmationBlockParent.className = 'confirmationBlockParent';
+            confirmationBlockParent.innerHTML =`
+            <div class='confirmationBlock'>
+                <p>Ваш регион ${region} ?</p>
+                <div>
+                    <button id='saveRegionBtn'>Да</button>
+                    <button id='notSaveRegionBtn'>Сменить регион</button>
+                </div>
+            </div>`
+            document.body.appendChild(confirmationBlockParent);
+            setTimeout(() => confirmationBlockParent.style.bottom = '20px', 700);
+
+            document.getElementById('saveRegionBtn').addEventListener('click', () => {
+                sessionStorage.setItem("region", region);
+                if(region == 'Республика Ингушетия') changeTheRegionBtn.innerHTML = `Респ. Ингушетия`;
+                else if(region == 'Чеченская Республика') changeTheRegionBtn.innerHTML = `Чеченская Респ.`;
+                else changeTheRegionBtn.innerHTML = `Москва`;
                 changingTheNumberAndLinks();
-                check = true;
-            }
-            break;
-        }
-    }
-    if(!check){
-        chooseRegionForm();
+                setTimeout(() => confirmationBlockParent.style.bottom = '-140px', 400);
+                setTimeout(() => confirmationBlockParent.remove(), 800)
+            })
+
+            document.getElementById('notSaveRegionBtn').addEventListener('click', () => {
+                chooseRegionForm();
+                setTimeout(() => confirmationBlockParent.style.bottom = '-140px', 400);
+                setTimeout(() => confirmationBlockParent.remove(), 800)
+            })
+        }        
     }
 }
 
@@ -114,8 +128,10 @@ choosingARegionBtns.forEach((btn) => {
     sessionStorage.setItem("region", btn.innerHTML);
     region = sessionStorage.getItem("region");
 
-    changeTheRegionBtn.innerHTML = `Сменить регион<br>Регион: ${region}`;
-    changeTheRegionBtn2.innerHTML = `Сменить регион<br>Регион: ${region}`;
+    if(region == 'Республика Ингушетия') changeTheRegionBtn.innerHTML = `Респ. Ингушетия`;
+    else if(region == 'Чеченская Республика') changeTheRegionBtn.innerHTML = `Чеченская Респ.`;
+    else changeTheRegionBtn.innerHTML = `Москва`;
+    
 
     document.body.style.overflow = "auto";
 
@@ -148,15 +164,6 @@ function changingTheNumberAndLinks(){
 
 
 changeTheRegionBtn.addEventListener("click", () => {
-    document.body.style.overflow = "hidden";
-
-    choosingARegionParentBlock.style.display = "flex";
-    setTimeout(() => {
-    choosingARegionParentBlock.style.opacity = 1;
-    }, 100);
-});
-
-changeTheRegionBtn2.addEventListener("click", () => {
     document.body.style.overflow = "hidden";
 
     choosingARegionParentBlock.style.display = "flex";

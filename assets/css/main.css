@@ -54,24 +54,54 @@ header {
   color: var(--text-color2);
 }
 
-.workSchedule {
+.region {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 2px;
 }
 
-.workSchedule span {
+.region span {
   color: var(--text-color1);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
 
-.workSchedule div {
-  height: 10px;
-  width: 10px;
-  background-color: #20ff87;
-  border-radius: 50%;
+.region img {
+  height: 20px;
+  width: 20px;
 }
+.confirmationBlockParent{
+  width: 100%;
+  position: fixed;
+  bottom: -140px;
+  transition: all 0.4s;
+  z-index: 2;
+}
+.confirmationBlock{
+  width: 316px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  margin-inline: auto;
+  box-shadow: 0px 10px 10px 10px rgba(34, 60, 80, 0.18);
+}
+.confirmationBlock div{
+  display: grid;
+  grid-template-columns: 140px 140px;
+  gap: 10px;
+  justify-content: space-between;
+}
+.confirmationBlock div button{
+  border: none;
+  height: 30px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+
 
 .socialNetworksBlock {
   display: flex;
@@ -99,10 +129,9 @@ header {
   transition: all 0.2s;
 }
 
-.changeTheRegionBtn,
-.changeTheRegionBtn2 {
+.consultationBtn {
   background: transparent;
-  padding: 18px;
+  padding: 22px;
   border: solid 1px var(--main-color1);
   color: var(--text-color2);
   border-radius: 100px;
@@ -884,8 +913,11 @@ footer {
     background-color: rgb(18, 82, 92);
     color: white;
   }
-
-  .changeTheRegionBtn:hover {
+  .confirmationBlock div button:hover{
+    background-color: var(--main-color1);
+    color: white;
+  }
+  .consultationBtn:hover {
     background-color: var(--main-color1);
     color: white;
   }
@@ -921,9 +953,12 @@ footer {
     background-color: rgb(18, 82, 92);
     color: white;
   }
-
-  .changeTheRegionBtn:active,
-  .changeTheRegionBtn2:active {
+  .confirmationBlock div button:active{
+    background-color: var(--main-color1);
+    color: white;
+  }
+  .consultationBtn:active,
+  .consultationBtn2:active {
     background-color: var(--main-color1);
     color: white;
   }
@@ -965,8 +1000,13 @@ footer {
     font-size: 18px;
   }
 
-  .workSchedule span {
+  .region span {
     font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .region img {
+    height: 18px;
+    width: 18px;
   }
 
   .background {
@@ -1214,7 +1254,7 @@ footer {
     width: 150px;
   }
 
-  .changeTheRegionBtn {
+  .consultationBtn {
     display: none;
   }
 
@@ -1223,15 +1263,19 @@ footer {
   }
 
   .phoneNumerBlock a {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .socialNetworksBlock {
     display: none;
   }
 
-  .workSchedule span {
-    font-size: 12px;
+  .region span {
+    font-size: 14px;
+  }
+  .region img {
+    height: 18px;
+    width: 18px;
   }
 
   .background {
@@ -1506,7 +1550,7 @@ footer {
     width: 130px;
   }
   
-  .changeTheRegionBtn {
+  .consultationBtn {
     display: none;
   }
 
@@ -1522,8 +1566,12 @@ footer {
     display: none;
   }
 
-  .workSchedule span {
+  .region span {
     font-size: 11px;
+  }
+  .region img {
+    height: 14px;
+    width: 14px;
   }
 
   .background {
