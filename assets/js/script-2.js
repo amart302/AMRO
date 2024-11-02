@@ -25,7 +25,7 @@ const contacts = [
     },
 ];
 
-let region = sessionStorage.getItem("region");
+let regionGlobal = sessionStorage.getItem("region");
 const choosingARegionBtns = document.querySelectorAll(".choosingARegionBtn");
 const phoneNumber = document.getElementById("phoneNumber");
 const linkTgs = document.querySelectorAll(".linkTg");
@@ -33,9 +33,9 @@ const linkWas = document.querySelectorAll(".linkWa");
 const changeTheRegionBtn = document.querySelector(".changeTheRegionBtn");
 const choosingARegionParentBlock = document.querySelector(".choosingARegionParentBlock");
 
-if (region) {
-    if(region == 'Республика Ингушетия') changeTheRegionBtn.innerHTML = `Респ. Ингушетия`;
-    else if(region == 'Чеченская Республика') changeTheRegionBtn.innerHTML = `Чеченская Респ.`;
+if (regionGlobal) {
+    if(regionGlobal == 'Республика Ингушетия') changeTheRegionBtn.innerHTML = `Респ. Ингушетия`;
+    else if(regionGlobal == 'Чеченская Республика') changeTheRegionBtn.innerHTML = `Чеченская Респ.`;
     else changeTheRegionBtn.innerHTML = `Москва`;
     changingTheNumberAndLinks();
 }else{
@@ -81,8 +81,9 @@ function showPosition(position){
 
             document.getElementById('saveRegionBtn').addEventListener('click', () => {
                 sessionStorage.setItem("region", region);
-                if(region == 'Республика Ингушетия') changeTheRegionBtn.innerHTML = `Респ. Ингушетия`;
-                else if(region == 'Чеченская Республика') changeTheRegionBtn.innerHTML = `Чеченская Респ.`;
+                regionGlobal = sessionStorage.getItem("region");
+                if(regionGlobal == 'Республика Ингушетия') changeTheRegionBtn.innerHTML = `Респ. Ингушетия`;
+                else if(regionGlobal == 'Чеченская Республика') changeTheRegionBtn.innerHTML = `Чеченская Респ.`;
                 else changeTheRegionBtn.innerHTML = `Москва`;
                 changingTheNumberAndLinks();
                 setTimeout(() => confirmationBlockParent.style.bottom = '-140px', 400);
@@ -123,13 +124,13 @@ function showError(err){
 choosingARegionBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
     sessionStorage.setItem("region", null);
-    region = sessionStorage.getItem("region");
+    regionGlobal = sessionStorage.getItem("region");
 
     sessionStorage.setItem("region", btn.innerHTML);
-    region = sessionStorage.getItem("region");
+    regionGlobal = sessionStorage.getItem("region");
 
-    if(region == 'Республика Ингушетия') changeTheRegionBtn.innerHTML = `Респ. Ингушетия`;
-    else if(region == 'Чеченская Республика') changeTheRegionBtn.innerHTML = `Чеченская Респ.`;
+    if(regionGlobal == 'Республика Ингушетия') changeTheRegionBtn.innerHTML = `Респ. Ингушетия`;
+    else if(regionGlobal == 'Чеченская Республика') changeTheRegionBtn.innerHTML = `Чеченская Респ.`;
     else changeTheRegionBtn.innerHTML = `Москва`;
     
 
@@ -145,7 +146,7 @@ choosingARegionBtns.forEach((btn) => {
 
 function changingTheNumberAndLinks(){
     for(let i = 0; i < contacts.length; i++){
-        if(contacts[i].region == region){
+        if(contacts[i].region == regionGlobal){
             phoneNumber.innerHTML = contacts[i].phoneNumber;
             phoneNumber.href = `tel:${contacts[i].phoneNumber}`;
 
