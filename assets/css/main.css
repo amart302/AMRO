@@ -77,7 +77,7 @@ header {
   position: fixed;
   bottom: -140px;
   transition: all 0.4s;
-  z-index: 2;
+  z-index: 3;
 }
 .confirmationBlock{
   width: 316px;
